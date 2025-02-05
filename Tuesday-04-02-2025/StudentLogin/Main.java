@@ -1,5 +1,3 @@
-package One_Piece.StudentLogin;
-
 import java.util.Scanner;
 public class Main {
     static Database data=new Database();
