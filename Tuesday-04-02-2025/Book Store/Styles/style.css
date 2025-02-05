@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin:0;
+     
+        font-family: "Indie Flower", serif;
+        font-weight: 400;
+        font-style: normal;  }
+      
+
+ 
+ul{
+    display :flex;
+    list-style-type: none;
+    background-color: rgb(235, 205, 128);
+    align-items: center;
+    justify-content: space-between;
+    padding:10px 10px;
+    font-size: larger;
+    
+}
+
+a{
+    all:unset
+}
+li{
+    font-size: 20px;
+}
+li:hover{
+    font-size: 30px;
+    background-color: blanchedalmond;
+    cursor: pointer;
+}
+.heading{
+    font-size: 50px;
+    font-weight: 1000;
+    padding: 10px;
+    background-color: antiquewhite;
+    text-align: center;
+}
+main{
+    display: grid;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+footer{
+  background-color:antiquewhite;  
+}
+#slot{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    row-gap: 10px;
+    column-gap: 10px;
+    padding: 10px;
+}
+.card:hover{
+    background-color: beige;
+    box-shadow: 2px 2px 5px 5px;
+}
+.card{
+    margin:auto;
+    padding: 5px;
+}
+h2{
+    font-size: 40px;
+}
+p{
+    font-size: 20px
+}
+body{
+    background-color: rgb(255, 236, 230);
+
+}
+label{
+    font-size: 20px
+}
+.space{
+    margin: 10px ;
+    font-size: 20px;
+    width: 60%;
+}
+
+form{
+    border: 5px solid rgb(148, 144, 144);
+    border-radius: 10px;
+    width: 40%;
+    margin: 100px auto;
+    padding: 50px ;
+    background-color: rgb(210, 203, 203);
+}
+#button{
+    width: 50%;
+    font-size: 20px;
+    margin-left:  40%;
+}
+
+
+@media only  screen and (max-width:600px){
+    .heading{
+        font-size: 20px;
+    }
+        #slot{
+            display: grid;
+            grid-template-columns: auto auto;
+            row-gap: 10px;
+            column-gap: 10px;
+            padding: 10px;
+        }
+}
