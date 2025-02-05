@@ -1,4 +1,3 @@
-package One_Piece.StudentLogin;
 import java.util.*;
 public class Student {
     private String name;
