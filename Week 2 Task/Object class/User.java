@@ -1,5 +1,3 @@
-package bbb;
-
 class User {
     private String name;
     private int age;
@@ -72,10 +70,10 @@ class SecondUser {
 
 class Main {
     public static void main(String[] args) {
-        User user1 = new User("Alice", 25);
-        User user2 = new User("Alice", 25);
-        SecondUser secondUser1 = new SecondUser("Alice", 25);
-        SecondUser secondUser2 = new SecondUser("Alice", 25);
+        User user1 = new User("Mark", 23);
+        User user2 = new User("Mark", 23);
+        SecondUser secondUser1 = new SecondUser("Mark", 23);
+        SecondUser secondUser2 = new SecondUser("Mark", 23);
 
         System.out.println("User1 toString: " + user1);
         System.out.println("User2 toString: " + user2);
