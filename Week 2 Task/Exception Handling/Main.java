@@ -1,5 +1,3 @@
-package Str;
-
 import java.util.Scanner;
 
 public class Main {
