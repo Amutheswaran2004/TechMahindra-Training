@@ -1,0 +1,24 @@
+<!-- 4. Create an alert to display the address of the user, and get the input from the user for the same
+5. Create a confirmation box , to check if the user will go the film today and display the result
+6. Create a prompt box , to get the age of the user and display the result -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Java Script</title>
+</head>
+<body>
+    <h1>Java Script</h1>
+    <script >
+        function alertmsg(){
+            var address=prompt("Enter your address ");
+            alert("Your address is "+address)
+            var result= confirm("Are you willing to go the flim") ? "yes" : "No"
+            alert(result)
+            var age=prompt("Enter your age")
+            alert(`Your age is ${age}`)
+
+        }
+    </script>
+    <button onclick="alertmsg()">Try it</button>
+</body>
+</html>
