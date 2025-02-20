@@ -1,0 +1,156 @@
+XML file
+
+ <servlet>
+        <servlet-name>MyServlet1</servlet-name>
+        <servlet-class>com.ProjectX.myServlet1</servlet-class> 
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MyServlet1</servlet-name>
+        <url-pattern>/myservlet1</url-pattern>
+    </servlet-mapping>
+
+  
+    <servlet>
+        <servlet-name>MyFirstServlet</servlet-name>
+        <servlet-class>com.ProjectX.myServlet</servlet-class> 
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MyFirstServlet</servlet-name>
+        <url-pattern>/myfirstservlet</url-pattern>
+    </servlet-mapping>
+    
+    <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+</welcome-file-list>
+
+<servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>com.ProjectX.Login</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/login</url-pattern>  
+</servlet-mapping>
+
+
+
+Login class
+
+
+public class Login extends HttpServlet {  
+    private static final long serialVersionUID = 1L;
+
+   
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+            throws ServletException, IOException {
+        response.setContentType("text/html");
+        PrintWriter writer = response.getWriter();
+        writer.println("<html><body>");
+        writer.println("<h2>Welcome to the Login Page</h2>");
+        writer.println("<form action='login' method='post'>");
+        writer.println("Username: <input type='text' name='username'><br><br>");
+        writer.println("Password: <input type='password' name='password'><br><br>");
+        writer.println("<input type='submit' value='Login'>");
+        writer.println("</form>");
+        writer.println("</body></html>");
+    }
+
+    
+    protected void doPost(HttpServletRequest req, HttpServletResponse res) 
+            throws ServletException, IOException {
+        String username = req.getParameter("username");
+        String password = req.getParameter("password");
+
+        res.setContentType("text/html");
+        PrintWriter writer = response.getWriter();
+        writer.println("<html><body>");
+        writer.println("<h2>Username: " + username + "<br/>");
+        writer.println("Password: " + password + "</h2>");
+        writer.println("</body></html>");
+    }
+
+
+
+Myservelet1 Class
+
+
+public class Myservelet1 extends HttpServlet{
+	private static final long serialVersionUID = 1L;
+
+	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		{
+			res.setContentType("text/html");      
+		       PrintWriter pwriter = res.getWriter();    
+		       pwriter.println("<html><body>");
+		       pwriter.println("<h2>Html file from Servlet!</h2>");
+		       pwriter.println("</body></html>");
+		}
+}
+}
+
+
+
+
+MyServelet Class
+
+
+
+
+public class  MyServlet extends HttpServlet {
+		private static final long serialVersionUID = 1L;
+
+		/**
+		 * @see HttpServlet#doGet(HttpServletRequest req, HttpServletResponse res)
+		 */
+		
+	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+			// TODO Auto-generated method stub
+			res.getWriter().append("Served at: ").append(req.getContextPath());
+	}
+	
+
+}
+
+
+
+
+index.html
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+</head>
+<body>
+<h1>hi</h1>
+<p>Hello world!</p>
+<a href="login.html">Login</a>
+</body>
+</html>
+
+
+login.html
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+</head>
+<body>
+    <h2>Login Form</h2>
+    <form action="login" method="post"> 
+    Username: <input type="text" name="username"><br><br>
+    Password: <input type="password" name="password"><br><br>
+    <input type="submit" value="Login">
+</form>
+
+
+</body>
+</html>
