@@ -1,0 +1,34 @@
+<html lang="en">
+  <head>
+   
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        body {
+          background-color: rgb(243, 31, 66);
+        }
+      </style>
+  </head>
+  <body>
+    
+    <div id="root"></div>
+    <script type="text/jsx">
+        function Flower(props){
+            return <h2>{props.name} is a flower</h2>;
+        }
+        let rt1=document.getElementById("root");
+        ReactDOM.render(<Flower name="Rose"/>,rt1);
+    </script>
+    </style>
+    </body>
+    </html>

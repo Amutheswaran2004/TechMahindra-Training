@@ -1,0 +1,46 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function Java(){
+            return <h3>Java is a programming language</h3>;
+        }
+        function JavaScript(){
+            return <h3>JavaScript is a scripting language</h3>;
+        }
+        function ReactJs(){
+            return <h3>React is a library</h3>;
+        }
+        function Angular(){
+            return <h3>Angular is a framework</h3>;
+        }
+        function Training(){
+            return (
+                <div>
+                    <h1>Topics for Training</h1>
+                <Java />
+                <JavaScript />
+                <ReactJs />
+                <Angular />
+            </div>
+            );
+        }
+        let rt1=document.getElementById("root");
+        ReactDOM.render(<Training />,rt1);
+        </script>
+        </body>
+        </html>
