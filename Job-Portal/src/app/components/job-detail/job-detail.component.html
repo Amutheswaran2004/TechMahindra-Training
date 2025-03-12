@@ -1,0 +1,40 @@
+<div class="container mt-4">
+    <div *ngIf="job" class="card mb-4">
+      <div class="card-body">
+        <h2 class="card-title">{{ job.title }}</h2>
+        <p class="card-text">{{ job.description }}</p>
+        <p class="card-text"><strong>Location:</strong> {{ job.location }}</p>
+        <p class="card-text"><strong>Salary:</strong> ${{ job.salary }}</p>
+        <p class="card-text"><strong>Posted on:</strong> {{ job.postedDate | date }}</p>
+        <a [routerLink]="['/company', job.companyId]" class="btn btn-secondary">View Company Profile</a>
+      </div>
+    </div>
+    <div>
+      <h3>Apply for this job</h3>
+      <form [formGroup]="applyForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label class="form-label">Full Name</label>
+          <input type="text" formControlName="fullName" class="form-control">
+          <div *ngIf="submitted && applyForm.controls['fullName'].errors" class="text-danger">
+            Name is required.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" formControlName="email" class="form-control">
+          <div *ngIf="submitted && applyForm.controls['email'].errors" class="text-danger">
+            A valid email is required.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Resume URL</label>
+          <input type="text" formControlName="resume" class="form-control">
+          <div *ngIf="submitted && applyForm.controls['resume'].errors" class="text-danger">
+            Resume is required.
+          </div>
+        </div>
+        <button type="submit" class="btn btn-secondary">Submit Application</button>
+      </form>
+    </div>
+  </div>
+  

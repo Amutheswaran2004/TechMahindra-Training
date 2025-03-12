@@ -1,0 +1,64 @@
+<!-- src/app/app.component.html -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/jobs">JobPortal</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Left side nav items -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/jobs">Jobs</a>
+        </li>
+        <!-- "My Profile" is visible only when logged in -->
+        <li *ngIf="isLoggedIn" class="nav-item">
+          <a class="nav-link" routerLink="/user/1">My Profile</a>
+        </li>
+      </ul>
+      <!-- Right side nav items -->
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <!-- Show "Login" if not logged in; if logged in, show "Logout" -->
+        <li *ngIf="!isLoggedIn" class="nav-item">
+          <a class="nav-link" routerLink="/login">Login</a>
+        </li>
+        <li *ngIf="isLoggedIn" class="nav-item">
+          <a class="nav-link" (click)="logout()" style="cursor: pointer;">Logout</a>
+        </li>
+      </ul>
+      <!-- Static welcome text -->
+      
+    </div>
+  </div>
+</nav>
+
+<!-- Standalone welcome title -->
+<div class="bg-secondary text-white mt-o">
+  <h1 class="text-center text-white bg-secondary p-3 rounded">Welcome to JobPortal</h1>
+</div>
+
+<router-outlet></router-outlet>
+
+<!-- Footer Section -->
+<footer class="bg-secondary text-white mt-5 p-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h5>Our Services</h5>
+        <p>
+          At JobPortal, we connect you with top-notch career opportunities, offer expert career guidance, and provide comprehensive recruitment services.
+          Whether you are a job seeker or a company looking for talent, our platform is designed to empower your professional journey.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <h5>Contact Us</h5>
+        <p>Email: support&#64;jobportal.com</p>
+        <p>Phone: +1 234 567 890</p>
+      </div>
+    </div>
+    <div class="text-center mt-3">
+      <small>&copy; 2025 JobPortal. All rights reserved.</small>
+    </div>
+  </div>
+</footer>

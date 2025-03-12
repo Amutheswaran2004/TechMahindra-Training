@@ -1,0 +1,7 @@
+body{
+    background-image: url('http://localhost:8090/'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+  }
+  

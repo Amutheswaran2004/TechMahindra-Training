@@ -1,0 +1,10 @@
+<div class="container mt-4">
+    <div *ngIf="company" class="card">
+      <div class="card-body">
+        <h2 class="card-title">{{ company.name }}</h2>
+        <img [src]="company.profileImage ? 'http://localhost:8090/' + company.profileImage : 'assets/default-image.jpg'"  alt="{{ company.name }} logo" class="img-fluid mb-3">
+        <p class="card-text">{{ company.description }}</p>
+      </div>
+    </div>
+  </div>
+  

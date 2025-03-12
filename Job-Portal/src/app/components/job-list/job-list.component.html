@@ -1,0 +1,10 @@
+<div class="container mt-4">
+  <h2>Job Listings</h2>
+  <!-- Search input styled with Bootstrap -->
+  <input type="text" [(ngModel)]="searchTerm" placeholder="Search jobs..." class="form-control mb-3" />
+ 
+    <li *ngFor="let job of jobs | jobFilter:searchTerm" class="list-group-item">
+      <app-job-item [job]="job"></app-job-item>
+    </li>
+
+</div>

@@ -1,0 +1,45 @@
+<div class="container mt-5">
+    <div class="card shadow">
+      <div class="card-body">
+        <h2 class="card-title text-center">Login</h2>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input 
+              type="email" 
+              id="email" 
+              formControlName="email" 
+              class="form-control" 
+              placeholder="Enter your email">
+            <div *ngIf="submitted && loginForm.controls['email'].errors" class="text-danger">
+              <div *ngIf="loginForm.controls['email'].errors['required']">
+                Email is required.
+              </div>
+              <div *ngIf="loginForm.controls['email'].errors['email']">
+                Enter a valid email.
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input 
+              type="password" 
+              id="password" 
+              formControlName="password" 
+              class="form-control" 
+              placeholder="Enter your password">
+            <div *ngIf="submitted && loginForm.controls['password'].errors" class="text-danger">
+              <div *ngIf="loginForm.controls['password'].errors['required']">
+                Password is required.
+              </div>
+            </div>
+          </div>
+          <div *ngIf="errorMessage" class="alert alert-danger">
+            {{ errorMessage }}
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

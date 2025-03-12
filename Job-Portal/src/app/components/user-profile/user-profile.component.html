@@ -1,0 +1,49 @@
+<div class="container mt-4">
+  <!-- Display profile in view mode -->
+  <div *ngIf="!editMode && user" class="card shadow-hover">
+    <div class="card-body">
+      <h2 class="card-title">{{ user.name }}</h2>
+      <p class="card-text"><strong>Email:</strong> {{ user.email }}</p>
+      <p class="card-text"><strong>Applied Jobs:</strong> {{ user.appliedJobs.join(', ') }}</p>
+      <p class="card-text">
+        <strong>Resume:</strong>
+        <a [href]="user.resume" target="_blank" class="btn btn-info btn-sm">View Resume</a>
+      </p>
+      <!-- You can add more static details here if available, e.g. address, phone, etc. -->
+      <button class="btn btn-secondary mt-2" (click)="toggleEditMode()">Edit Profile</button>
+    </div>
+  </div>
+
+  <!-- Edit profile form -->
+  <div *ngIf="editMode" class="card shadow-hover">
+    <div class="card-body">
+      <h2 class="card-title ">Edit Profile</h2>
+      <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label class="form-label">Name</label>
+          <input type="text" formControlName="name" class="form-control" />
+          <div *ngIf="submitted && userForm.controls['name'].errors" class="text-danger">
+            Name is required.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" formControlName="email" class="form-control" />
+          <div *ngIf="submitted && userForm.controls['email'].errors" class="text-danger">
+            A valid email is required.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Resume URL</label>
+          <input type="text" formControlName="resume" class="form-control" />
+          <div *ngIf="submitted && userForm.controls['resume'].errors" class="text-danger">
+            Resume URL is required.
+          </div>
+        </div>
+        <!-- Add additional fields here if needed -->
+        <button type="submit" class="btn btn-success me-2">Save Changes</button>
+        <button type="button" class="btn btn-secondary" (click)="toggleEditMode()">Cancel</button>
+      </form>
+    </div>
+  </div>
+</div>

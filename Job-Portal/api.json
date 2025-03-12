@@ -1,0 +1,86 @@
+{
+  "jobs": [
+    {
+      "id": "1",
+      "title": "Software Engineer",
+      "companyId": 1,
+      "location": "Chennai, India",
+      "salary": 60000,
+      "description": "Develop and maintain software applications.",
+      "postedDate": "2025-03-01"
+    },
+    {
+      "id": "2",
+      "title": "Data Analyst",
+      "companyId": 2,
+      "location": "Bangalore, India",
+      "salary": 55000,
+      "description": "Analyze and interpret complex data sets.",
+      "postedDate": "2025-03-03"
+    },
+    {
+      "id": "3",
+      "title": "Frontend Developer",
+      "companyId": 4,
+      "location": "Hyderabad, India",
+      "salary": 50000,
+      "description": "Design and develop user interfaces.",
+      "postedDate": "2025-03-05"
+    },
+    {
+      "id": "4",
+      "title": "Backend Developer",
+      "companyId": 5,
+      "location": "Hyderabad, India",
+      "salary": 50000,
+      "description": "Design and develop user interfaces.",
+      "postedDate": "2025-03-05"
+    }
+  ],
+  "companies": [
+    {
+      "id": "1",
+      "name": "Tech Innovators",
+      "profileImage": "7.jpg",
+      "description": "Tech Innovators is a global leader in technology and innovation, dedicated to pushing the boundaries of what is possible. With a rich history of groundbreaking research and development, they specialize in creating advanced software solutions, hardware innovations, and integrated systems that drive business growth. Their dynamic team of experts continually strives to deliver cutting-edge products and services, transforming industries and empowering customers worldwide."
+    },
+    {
+      "id": "2",
+      "name": "Data Insights",
+      "profileImage": "O3IICE0.jpg",
+      "description": "Data Insights stands at the forefront of data analytics and business intelligence, turning complex data sets into clear, actionable insights. With an experienced team of data scientists and analysts, the company offers robust analytics solutions that help businesses optimize operations and drive strategic decision-making. Their innovative approach and commitment to excellence ensure that clients receive customized, high-impact data solutions that foster sustainable growth."
+    },
+    {
+      "id": "3",
+      "name": "Web Designers",
+      "profileImage": "971.jpg",
+      "description": "Web Designers is a creative powerhouse specializing in delivering visually stunning and highly functional web solutions. With a focus on user experience and responsive design, their team of skilled designers and developers craft bespoke websites that captivate audiences and drive engagement. Their commitment to quality and innovation has made them a trusted partner for businesses seeking to establish a strong online presence."
+    },
+    {
+      "id": "4",
+      "name": "Web Designers",
+      "profileImage": "7459344.jpg",
+      "description": "Web Designers, our second branch, builds on creative expertise to offer comprehensive digital design services. Their innovative approach combines modern aesthetics with advanced functionality, ensuring that every website is tailored to meet each client's unique needs. With a collaborative process and a keen eye for detail, they deliver digital solutions that are both visually impressive and highly effective."
+    },
+    {
+      "id": "5",
+      "name": "Startup Hub",
+      "profileImage": "7455353.jpg",
+      "description": "Startup Hub is a vibrant incubator and accelerator committed to fostering entrepreneurial success. By providing startups with essential resources, mentorship, and strategic partnerships, Startup Hub creates a thriving ecosystem that nurtures innovation and growth. Their dedicated team works closely with emerging companies to refine business strategies, secure funding, and navigate market challenges, ultimately driving the next generation of groundbreaking enterprises."
+    }
+  ],
+  "users": [
+    {
+      "name": "Amutheswaran M",
+      "email": "amudheswaran@gmail.com",
+      "resume": "https://drive.google.com/file/d/1aL4xlxShSCJU6fpex1Pkh4Gy6NgfwqL5/view?usp=drive_open",
+      "id": "1"
+    },
+    {
+      "id": "b19a",
+      "fullName": "tamil",
+      "email": "tamil@gmail.com",
+      "resume": "none"
+    }
+  ]
+}

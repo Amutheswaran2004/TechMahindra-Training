@@ -1,0 +1,9 @@
+<div class="card shadow-hover p-3">
+    <div class="card-body">
+      <h5 class="card-title">{{ job.title }}</h5>
+      <p class="card-text">{{ job.location }} - ${{ job.salary }}</p>
+      <a *ngIf="job.id" [routerLink]="['/job', job.id]" class="btn btn-secondary">View Details</a>
+
+    </div>
+  </div>
+  
